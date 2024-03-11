@@ -57,3 +57,20 @@ If the comparison score is greater than 1, it means that the first business acti
 Conversely, if the comparison score is less than 1, it means that Activity_1 has a lower average paid-up capital than Activity_2. This could indicate that Activity_1 is financially smaller or weaker than Activity_2.
 
 If the comparison score is exactly 1, it means that both business activities have the same average paid-up capital.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<b>Liquidity Ratios:</b>
+Liquidity ratios are financial metrics that assess a company’s ability to meet its short-term debt obligations without needing to secure additional capital. They are crucial for evaluating a company’s short-term financial health and its ability to quickly convert assets into cash.
+
+These ratios are particularly useful in comparative analysis, either internally over multiple periods or externally against other companies or industry benchmarks. A higher liquidity ratio indicates better coverage of outstanding debts and a more robust liquidity position.
+
+The liquidity ratios in your table are useful for evaluating the financial flexibility of the companies listed. Here’s how they can be interpreted: i.e.:
+
+REAL TOUCH FINANCE LIMITED: A liquidity ratio of 1.276325 suggests that for every unit of paid-up capital, the company has around 1.28 units of authorized capital. This indicates a reasonable buffer above its paid-up capital, which could be beneficial in covering short-term obligations.
+EASTERN INDUSTRIAL WORKS & SERVICESLIMITED: With a liquidity ratio of 1.019004, this company’s authorized capital is just slightly above its paid-up capital, suggesting tighter financial flexibility.
+ACKNIT INDUSTRIES LIMITED: A higher liquidity ratio of 3.947368 implies that the company has a significant amount of authorized capital in comparison to its paid-up capital, indicating a strong liquidity position.
+SKG CONSOLIDATED LTD: Similarly, a liquidity ratio of 3.333333 shows that the company has more than three times its paid-up capital in authorized capital, which is a strong liquidity position.
+SCINTIFIC AGRO HERBAL & PLANTATION LTD.: The highest liquidity ratio of 12.500000 in the table suggests that the company has a very high level of authorized capital relative to its paid-up capital, indicating a very strong liquidity position.
+These ratios are particularly useful for stakeholders to assess how well a company can meet its short-term liabilities with its most liquid assets. A higher ratio generally indicates a better ability to pay off debts as they come due without needing to liquidate other assets or seek additional financing. However, extremely high ratios might also suggest that a company is not utilizing its capital efficiently. It’s important to consider these ratios in the context of the industry average and the specific circumstances of each company.
+
