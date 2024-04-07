@@ -210,11 +210,10 @@ def main():
         st.write("Smaller DataFrame showcasing Liquidity Ratios.")
         st.write(liquidity_df)
         # Get the top 5 business activities over all years
-        #top_activities = df['PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN'].value_counts().nlargest(5).index.tolist()
+        top_business_activities = filtered_df['PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN'].value_counts().head(5).index.tolist()
 
-        # Train ARIMA model
+        # Now use this top 5 to train ARIMA
         train_arima(df, top_business_activities)
-
 
 if __name__ == "__main__":
     main()
