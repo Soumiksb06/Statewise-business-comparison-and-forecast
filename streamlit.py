@@ -32,7 +32,7 @@ def train_arima(df, top_activities):
         plt.plot(y.index.year, y.values, marker='o', label='Historical Data')
         plt.plot(range(y.index.year.max() + 1, y.index.year.max() + 1 + forecast_steps), forecast_values, marker='o', label='Forecast')
         plt.title(f'Forecast of {category_to_forecast} registrations (2021-2025)')
-        plt.xticks(np.arange(1990, 2026, 1))
+        plt.xticks(np.arange(1990, 2026, 1),rotation=90)
         plt.xlabel('Year')
         plt.ylabel('Count of Registrations')
         plt.legend()
@@ -58,9 +58,6 @@ def main():
 
         # Extract year from the registration date
         df['Registration_Year'] = df['DATE_OF_REGISTRATION'].dt.year
-
-        # Check for missing values
-        st.write(df.isnull().sum())
 
         df=df.drop(['DATE_OF_REGISTRATION','EMAIL_ADDR'],axis=1)
         st.write(df)
