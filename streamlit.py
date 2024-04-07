@@ -123,14 +123,18 @@ def main():
         # Filter the dataframe to include only the top activities
         df_top_activities = df[df['PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN'].isin(top_activities)]
 
+        # Find the top 5 activities over all years
+        top_5_activities_overall = df_top_activities['PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN'].value_counts().nlargest(5).index.tolist()
+
         plt.figure(figsize=(16, 8),dpi=300)
-        sns.countplot(x='Registration_Year', hue='PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN', data=df_top_activities[(df_top_activities['Registration_Year']>=1990) & (df_top_activities['Registration_Year']<=2020)], palette='Set1', hue_order=top_activities)
+        sns.countplot(x='Registration_Year', hue='PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN', data=df_top_activities[(df_top_activities['Registration_Year']>=1990) & (df_top_activities['Registration_Year']<=2020)], palette='Set1', hue_order=top_5_activities_overall)
         plt.title('Top 5 Principal Business Activities Over Time')
         plt.xlabel('Registration Year')
         plt.ylabel('Count')
         plt.xticks(rotation=90)
         plt.legend(title='Principal Business Activity', fontsize='small')
         st.pyplot(plt)
+
 
         # Filter companies registered between 2013 and 2020
         filtered_df = df[(df['Registration_Year'] >= 2013) & (df['Registration_Year'] <= 2020)]
