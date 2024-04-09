@@ -42,16 +42,6 @@ def train_arima(df, top_activities):
         st.write(f"Forecasted registrations for {category_to_forecast} for 2021-2025:")
         st.write(forecast_values)
 
-import streamlit as st
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
-
-def train_arima(df, top_business_activities):
-    # ARIMA model training code goes here
-    pass
-
 def main():
     st.title("Company Analysis App")
 
@@ -59,7 +49,7 @@ def main():
     file_extensions = [".csv", ".xlsx"]
 
     # Create the dropdown file selector
-    selected_file = st.selectbox("Choose a file", file_extensions)
+    selected_file = st.dropdown("Choose a file", file_extensions)
 
     if selected_file is not None:
         if selected_file == ".csv":
