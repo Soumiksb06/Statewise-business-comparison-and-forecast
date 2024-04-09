@@ -42,22 +42,35 @@ def train_arima(df, top_activities):
         st.write(f"Forecasted registrations for {category_to_forecast} for 2021-2025:")
         st.write(forecast_values)
 
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+def train_arima(df, top_business_activities):
+    # ARIMA model training code goes here
+    pass
+
 def main():
     st.title("Company Analysis App")
 
-    file_types = ["csv", "xlsx"]
-    selected_file = st.selectbox("Choose a CSV or XLSX file", options=file_types)
+    # Create a list of file extensions to display in the dropdown
+    file_extensions = [".csv", ".xlsx"]
+
+    # Create the dropdown file selector
+    selected_file = st.selectbox("Choose a file", file_extensions)
 
     if selected_file is not None:
-        if selected_file == "csv":
+        if selected_file == ".csv":
             uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
-        elif selected_file == "xlsx":
+        elif selected_file == ".xlsx":
             uploaded_file = st.file_uploader("Choose an XLSX file", type="xlsx")
 
         if uploaded_file is not None:
-            if selected_file == "csv":
+            if selected_file == ".csv":
                 df = pd.read_csv(uploaded_file, encoding='ISO-8859-1', low_memory=False)
-            elif selected_file == "xlsx":
+            elif selected_file == ".xlsx":
                 df = pd.read_excel(uploaded_file)
 
             # Assuming df is your DataFrame
