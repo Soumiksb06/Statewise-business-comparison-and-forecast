@@ -118,7 +118,7 @@ def main():
         top_5_activities_overall = df_top_activities['PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN'].value_counts().nlargest(5).index.tolist()
 
         plt.figure(figsize=(16, 8),dpi=300)
-        sns.countplot(x='REGISTRATION_YEAR', hue='PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN', data=df_top_activities[(df_top_activities['REGISTRATION_YEAR']>=1990) & (df_top_activities['Registration_Year']<=2020)], palette='Set1', hue_order=top_5_activities_overall)
+        sns.countplot(x='REGISTRATION_YEAR', hue='PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN', data=df_top_activities[(df_top_activities['REGISTRATION_YEAR']>=1990) & (df_top_activities['REGISTRATION_YEAR']<=2020)], palette='Set1', hue_order=top_5_activities_overall)
         plt.title('Top 5 Principal Business Activities Over Time')
         plt.xlabel('Registration Year')
         plt.ylabel('Count')
