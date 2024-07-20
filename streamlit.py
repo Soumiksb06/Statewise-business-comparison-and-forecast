@@ -71,15 +71,6 @@ def main():
         plt.xticks(rotation=90)
         st.pyplot(plt)
 
-        # EDA - Company Status
-        plt.figure(figsize=(12, 5))
-        sns.countplot(x='Company_status', data=df[(df['Registration_Year']<=2020) & (df['Registration_Year']>=1990)])
-        plt.title('Distribution of Company Status')
-        plt.xlabel('Company Status')
-        plt.ylabel('Count')
-        plt.xticks(rotation=45,ha='right')
-        st.pyplot(plt)
-
         # EDA - Relationship between Authorized Capital and Paid-up Capital
         st.write("**Authorized Capital**: This is the maximum amount of share capital that a company is authorized to issue to shareholders.")
         st.write("**Paid-up Capital**: This is the amount of money a company has received from shareholders in exchange for shares.")
