@@ -128,7 +128,7 @@ def main():
 
 
         # Filter companies registered between 2013 and 2020
-        filtered_df = df[(df['Registration_Year'] >= 2013) & (df['Registration_Year'] <= 2020)]
+        filtered_df = df[(df['REGISTRATION_YEAR'] >= 2013) & (df['REGISTRATION_YEAR'] <= 2020)]
 
         # Get the top 5 business activities
         top_business_activities = filtered_df['PRINCIPAL_BUSINESS_ACTIVITY_AS_PER_CIN'].value_counts().head(5)
